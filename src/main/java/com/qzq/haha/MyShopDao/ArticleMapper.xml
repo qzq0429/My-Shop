@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qzq.haha.MyShopDao.ArticleMapper">
+    <resultMap id="Article" type="com.qzq.haha.POJO.Article">
+        <id column="ID" property="id"/>
+        <result column="TYPE_CODE" property="typeCode"/>
+        <result column="TITLE" property="title"/>
+        <result column="SUPPLIER" property="supplier"/>
+        <result column="PRICE" property="price"/>
+        <result column="DISCOUNT" property="discount"/>
+        <result column="LOCALITY" property="locality"/>
+        <result column="PUTAWAY_DATE" property="putawayDate"/>
+        <result column="STORAGE" property="storage"/>
+        <result column="IMAGE" property="image"/>
+        <result column="DESCRIPTION" property="description"/>
+        <result column="CREATE_DATE" property="createDate"/>
+        <result column="DISABLED" property="disabled"/>
+    </resultMap>
+    <select id="selectList" resultMap="Article">
+        SELECT *  FROM ec_article
+    </select>
+
+</mapper>
